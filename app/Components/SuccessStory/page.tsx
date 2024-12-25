@@ -1,6 +1,6 @@
 // pages/success-story.tsx
 import React from "react";
-import SuccessStorySection from "../StorySection/page";
+import SuccessStorySection from "../../Components/Storysection";
 
 const SuccessStory: React.FC = () => {
   return (

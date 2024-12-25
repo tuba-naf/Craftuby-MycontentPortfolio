@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image"; // Import Image component from next/image
 import {
   FaHome,
   FaInfoCircle,
@@ -23,11 +24,11 @@ const Header: React.FC = () => {
       {/* Top Navbar */}
       <nav className="flex items-center justify-between px-16 py-4 bg-black text-white shadow-md">
         <div className="flex items-center ml-8">
-          <img
-            src="/image/TNsig.jpg"
+          <Image
+            src="/image/TNsig.jpg" // Make sure this path is correct
             alt="Logo"
-            width="100"
-            height="100"
+            width={100}
+            height={100}
             className="object-contain"
           />
         </div>
@@ -82,7 +83,6 @@ const Header: React.FC = () => {
             </Link>
           </li>
         </ul>
-        
       </nav>
 
       {/* Mobile Menu */}

@@ -1,14 +1,13 @@
 import React from "react";
+import Image from "next/image"; // Import Image component from next/image
 
-interface PoetryCardProps {
-  id: number;
+interface SuccessStorySectionProps {
   title: string;
   description: string;
   image: string;
 }
 
-const PoetryCard: React.FC<PoetryCardProps> = ({
-  id,
+const SuccessStorySection: React.FC<SuccessStorySectionProps> = ({
   title,
   description,
   image,
@@ -22,16 +21,18 @@ const PoetryCard: React.FC<PoetryCardProps> = ({
           <h2 className="text-3xl font-bold">{title}</h2>
           <p className="text-lg text-gray-300 mt-2">{description}</p>
         </div>
-
+        
         {/* Image Section - ensure whole image shows */}
-        <img
-          className="w-full max-w-lg h-auto object-contain rounded-lg mt-4" // Adjust width and height dynamically
+        <Image
+          className="w-full max-w-lg h-auto object-contain rounded-lg mt-4"
           src={image}
           alt={title}
+          width={800} // Define width (adjust as needed)
+          height={450} // Define height (adjust as needed)
         />
       </div>
     </div>
   );
 };
 
-export default PoetryCard;
+export default SuccessStorySection;

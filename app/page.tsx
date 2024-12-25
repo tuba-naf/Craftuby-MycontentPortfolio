@@ -10,9 +10,6 @@ const page = () => {
       <Header/>
       <Hero/>
       <Footerpage/>
-      
-      
-      
     </div>
   )
 }

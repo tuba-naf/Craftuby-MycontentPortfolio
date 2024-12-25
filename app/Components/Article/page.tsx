@@ -1,10 +1,18 @@
 "use client";
 
 import React, { useState } from "react";
-import ArticleCard from "../ArticleCard/page"; 
-import ArticleContent from "../ArticleContent/page"; 
+import ArticleCard from "../../Components/Articlecard";
+import ArticleContent from "../../Components/Articlecontent";
 
-const ARTICLES = [
+interface Article {
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  image: string;
+}
+
+const ARTICLES: Article[] = [
   {
     id: 1,
     title: "Then Vs Now: Generation Z Concerns",
@@ -18,7 +26,7 @@ politician is no more".
   },
   {
     id: 2,
-    title: "The ‘P’ in patriarchy stands for poor education ",
+    title: "The ‘P’ in patriarchy stands for poor education",
     excerpt: "Pakistani woman is born free but is everywhere in chains designed by men due to a poorly educated patriarchal mindset",
     content: `
       https://tribune.com.pk/article/97705/the-p-in-patriarchy-stands-for-poor-education.
@@ -40,9 +48,9 @@ strengthen its roots in our local culture.
 ];
 
 const Article: React.FC = () => {
-  const [selectedArticle, setSelectedArticle] = useState<any>(null);
+  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
 
-  const handleReadMore = (article: any) => {
+  const handleReadMore = (article: Article) => {
     setSelectedArticle(article);
   };
 
@@ -63,7 +71,7 @@ const Article: React.FC = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen p-6">
-      <h1 className="text-4xl  font-bold text-center mb-8">Articles</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">Articles</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ARTICLES.map((article) => (
           <ArticleCard

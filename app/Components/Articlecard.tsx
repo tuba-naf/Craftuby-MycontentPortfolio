@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image"; // Import for optimized images
 
 interface ArticleCardProps {
   title: string;
@@ -12,7 +13,15 @@ interface ArticleCardProps {
 const ArticleCard: React.FC<ArticleCardProps> = ({ title, excerpt, image, onReadMore }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <div className="relative w-full h-48">
+        <Image 
+          src={image} 
+          alt={title} 
+          layout="fill" 
+          objectFit="cover" 
+          className="rounded-t-lg" 
+        />
+      </div>
       <div className="p-4">
         <h2 className="text-xl font-semibold">{title}</h2>
         <p className="text-gray-600">{excerpt}</p>

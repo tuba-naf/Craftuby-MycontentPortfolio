@@ -1,6 +1,6 @@
 // components/PoetryList.tsx
 import React from "react";
-import PoetryCard from "../PoetryCard/page"; 
+import PoetryCard from "../Poetrycard"; 
 
 const poetryDetails = [
   {
@@ -30,7 +30,6 @@ const PoetryList: React.FC = () => {
       {poetryDetails.map((poem) => (
         <PoetryCard
           key={poem.id}
-          id={poem.id}
           title={poem.title}
           description={poem.description}
           image={poem.image}
