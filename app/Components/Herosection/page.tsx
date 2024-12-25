@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/Image/Me.png"// Replace this with your image path
+              src="/image/Me.png"// Replace this with your image path
               alt="About Us"
               layout="intrinsic"
               width={400}
