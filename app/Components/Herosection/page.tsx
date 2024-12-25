@@ -25,7 +25,7 @@ const Hero = () => {
           {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
-              src="/image/Me.png"// Replace this with your image path
+              src="/Image/Me.png"// Replace this with your image path
               alt="About Us"
               layout="intrinsic"
               width={400}
@@ -35,17 +35,7 @@ const Hero = () => {
             />
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-  {/* Image Section */}
-  <div className="w-full md:w-1/2">
-    <Image
-      src="/path/to/your/image.jpg" // Replace with your image path
-      alt="Your Image"
-      width={500} // Set width according to your design
-      height={300} // Set height according to your design
-      className="w-full h-auto object-cover rounded-lg"
-    />
-  </div>
+          
 
   {/* Text Section */}
   <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8">
@@ -58,7 +48,7 @@ const Hero = () => {
 
         </div>
       </div>
-    </div>
+    
   )
 }
 
