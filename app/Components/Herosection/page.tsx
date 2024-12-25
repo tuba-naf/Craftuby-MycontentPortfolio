@@ -35,13 +35,27 @@ const Hero = () => {
             />
           </div>
 
-          {/* Text */}
-          <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8">
-            <h2 className="text-2xl font-bold mb-4">Do You Want to Know more?</h2>
-            <p className="text-gray-700 text-base leading-relaxed text-justify">
-            I am Tuba Nafees, a passionate learner, enthusiastic writer, and artistic soul. Academically, I hold a degree in Biotechnology from the University of Karachi, where I was honored with two Gold medals. Since childhood, I have  nurtured my artistic interests, and after graduation, I delved deeper into expressing them through my literary pieces. I firmly believe that words possess life-changing potential. They empower my thoughts and bless me with the freedom of expression, empowering me as a strong woman.
-            </p>
-          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+  {/* Image Section */}
+  <div className="w-full md:w-1/2">
+    <Image
+      src="/path/to/your/image.jpg" // Replace with your image path
+      alt="Your Image"
+      width={500} // Set width according to your design
+      height={300} // Set height according to your design
+      className="w-full h-auto object-cover rounded-lg"
+    />
+  </div>
+
+  {/* Text Section */}
+  <div className="w-full md:w-1/2 mt-6 md:mt-0 md:pl-8">
+    <h2 className="text-2xl font-bold mb-4">Do You Want to Know More?</h2>
+    <p className="text-gray-700 text-base leading-relaxed text-justify">
+      I am Tuba Nafees, a passionate learner, enthusiastic writer, and artistic soul. Academically, I hold a degree in Biotechnology from the University of Karachi, where I was honored with two Gold medals. Since childhood, I have nurtured my artistic interests, and after graduation, I delved deeper into expressing them through my literary pieces. I firmly believe that words possess life-changing potential. They empower my thoughts and bless me with the freedom of expression, empowering me as a strong woman.
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
     </div>
