@@ -10,7 +10,7 @@ const Page = () => {
         {/* Image */}
         <div className="w-full md:w-1/2 flex justify-center">
           <Image
-            src="/image/Me.png" // Replace this with your actual image path
+            src="/image/ME.png" // Replace this with your actual image path
             alt="About Us"
             width={400}
             height={400}
